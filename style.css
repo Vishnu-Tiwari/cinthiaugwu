@@ -1,0 +1,134 @@
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: rgb(var(--color2));
+
+    color: rgb(var(--color1));
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* cursor follow styles */
+.cursor-follow{
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%,-50%) scale(1,1);
+    background-color: rgb(var(--color1));
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 99999999999;
+    mix-blend-mode: difference;
+}
+
+/* navbar styles */
+.navbar{
+    background-color: rgb(var(--color2));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+
+.navbar-brand{
+    --bs-navbar-brand-hover-color: rgb(var(--color1), 0.5);
+    --bs-nav-link-hover-color: rgb(var(--color1), 0.5);
+    color: rgb(var(--color1));
+    font-size: 2rem;
+}
+
+.navbar-nav a{
+    --bs-nav-link-hover-color: rgb(var(--color1), 0.5);
+    color: rgb(var(--color1));
+    font-size: 1.5rem;
+
+}
+
+/* product designer styles */
+.product-designer{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10rem;
+    
+}
+
+.product-designer h1{
+    font-size: 17rem;
+    color: rgb(var(--color1));
+    line-height: 0.85;
+}
+
+.product-designer .designer{
+    display: inline-block;
+    width: fit-content;
+    margin-left: 15rem;
+}
+
+.product-designer .bottom-txt{
+    width: 100vw;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+
+/* product card section styles */
+.product-card-section{
+    padding: 7rem 5rem;
+}
+
+.product-card-section .card{
+    position: relative;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-top: 0.1rem solid rgb(var(--color1));
+    border-bottom: 0.1rem solid rgb(var(--color1));
+    color: inherit;
+    padding: 4rem 0;
+    display: flex;
+}
+
+.product-card-section .card h1{
+    font-size: 11rem;
+    font-weight: 400;
+    width: fit-content;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.product-card-section .card p{
+    font-size: 1.5rem;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.product-card-section .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    user-select: none;
+    pointer-events: none;
+}
+
+.product-card-section .card img{
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
